@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<title> TPN2 </title>
+
+<head>
+    <h1> CONTACT FORM </h1>
+</head>
+
+<body>
+    <link rel="stylesheet" href="style.css">
+    <h2>1) Your basic info</h2>
+
+    <form method="POST">
+  
+           <!--
+        <div class="form-group">
+            <label for="">Hola</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Chau</label>
+            <input type="text" class="form-control">
+        </div>
+        -->
+        <input type="text" name="name" /> Name
+        <br></br>
+        <input type="email" name="email" />Email
+        <br></br>
+        <input type="password" name="password" />Password
+        <br></br>
+        <input type="date" name="date" />Birthday
+        <br></br>
+        <label>Sex</label>
+        <input type="radio" name="sex" /> Male
+        <input type="radio" name="sex" /> Female
+
+    </form>
+
+    <h3>2) Your profile</h3>
+    <form method="POST">
+        <br></br>
+        <label>About you</label>
+        <br></br>
+        <textarea> </textarea>
+        <br></br>
+        <label>Role</label>
+        <br></br>
+        <select name="role">
+            <option>Front-End Developer</option>
+            <option>Back-End Developer</option>
+            <option>Junior</option>
+            <option>Senior</option>
+            <option>Tester</option>
+        </select>
+        <br></br>
+        <label>Interests</label>
+        <br></br>
+        <input type="checkbox" name="interest" />Data Base
+        <input type="checkbox" name="interest" />Design
+        <input type="checkbox" name="interest" />Business
+        <input type="checkbox" name="interest" />Unit Test
+        <input type="checkbox" name="interest" />Cloud Development
+        <input type="checkbox" name="interest" />Web Development
+        <br></br>
+        <br></br>
+        <input type="submit" name="send" />
+        <input type="reset" name="reset" />
+    </form>
+</body>
+
+
+
+</html>
