@@ -156,7 +156,7 @@ contarMujeresMenores($people);
 <?php
 function tablearArray($array){
 ?>
-<table>
+<table border="1">
 <caption>Tabla?</caption>
 <thead>
 <tr>
@@ -281,8 +281,35 @@ for($cont=0;$cont<sizeof($name_array);$cont++)
 }
 sort($name_array);
  mostrar($name_array);
-$new_array=$name_array;
- ucfirst($new_array);
+
+
+function primerMayuscula($array){
+ $i=0;
+ $aux;
+    for($i=0;$i<sizeof($array);$i++){
+    $aux[$i]=ucfirst($array[$i]);
+}
+return $aux;
+}
+
+$new_array=primerMayuscula($name_array);
+
  mostrar($new_array);
+
+ $new_array_int=count($new_array);
+ $keys=array(1,2,3,4,5,6);
+ $keys_int=count($keys);
+ echo "CANT ELEMENTOS ARRAY: ".$new_array_int." CANT ELEMENTOS KEYS: ".$keys_int.'<br>';
+ mostrar($keys);
+
+$array_asociative=array_combine($keys,$new_array);
+function mostrarConKey($array){ 
+    foreach ($array as $key => $value) {
+        echo $value.'<br>';
+    }
+    }
+    mostrarConKey($array_asociative);
 ?>
 <h4>2</h4>
+
+

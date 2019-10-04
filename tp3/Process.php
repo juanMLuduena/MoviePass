@@ -10,7 +10,7 @@ else{
 
 function tablearPersona($nombre,$edad,$sexo){
     ?>
-    <table>
+    <table border="1">
     <caption>Tabla?</caption>
     <thead>
     <tr>
