@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="map">
-                    <img src="img/map.jpg" alt="">
+                    <img src="img/signupimage.png" alt="">
                 </div>
             </div>
             <div class="col-md-6">
@@ -43,7 +43,13 @@
                                     placeholder="Email" required>
                             </fieldset>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
+                            <fieldset>
+                                <input name="birthdate" type="date" class="form-control" id="birthdate"
+                                    placeholder="Fecha de Nacimiento" required> <!-- Ver como arreglar el placeholder-->
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
                             <fieldset>
                                 <input name="nickname" type="text" class="form-control" id="nickname"
                                     placeholder="Usuario" required>

@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h4>Our Blog Posts</h4>
+                    <h4>Tarifas</h4>
                     <div class="line-dec"></div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                     <div class="thumb">
                         <img src="img/blog_01.jpg" alt="">
                         <div class="text-content">
-                            <h4>Delecioius Food Served</h4>
+                            <h4>Estándar</h4>
                             <span>Posted: <em>George</em> / Date: <em>11 Aug 2017</em> / Category:
                                 <em>Design</em></span>
                         </div>
@@ -34,7 +34,7 @@
                     <div class="thumb">
                         <img src="img/blog_02.jpg" alt="">
                         <div class="text-content">
-                            <h4>Creative &amp; Clean Workspace</h4>
+                            <h4>Estudiantes</h4>
                             <span>Posted: <em>Kerley</em> / Date: <em>24 Jul 2017</em> / Category:
                                 <em>Artwork</em></span>
                         </div>
@@ -46,7 +46,7 @@
                     <div class="thumb">
                         <img src="img/blog_03.jpg" alt="">
                         <div class="text-content">
-                            <h4>Crashed Plane Captured</h4>
+                            <h4>Jubilados</h4>
                             <span>Posted: <em>Johnny</em> / Date: <em>16 Jul 2017</em> / Category:
                                 <em>Branding</em></span>
                         </div>
