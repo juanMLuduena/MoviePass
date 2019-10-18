@@ -1,7 +1,6 @@
 <?php namespace Views;
 
-
-include("Config/Autoload.php");
+use DAO\MovieRepository as MovieRepository;
 
 $prueba = new MovieRepository();
 

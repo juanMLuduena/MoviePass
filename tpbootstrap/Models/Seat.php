@@ -4,7 +4,7 @@ class Seat{
     private $number;
     private $status;
 
-    public function __construct($number,$status)
+    public function __constructor($number,$status)
     {
         $this->number = $number;
         $this->status = $status;

@@ -9,7 +9,7 @@ class User{
     private $permissions;
     private $tickets = array();
 
-    public function __construct($userName, $password, $email, $firstname, $lastname, $permissions, $tickets)
+    public function __constructor($userName, $password, $email, $firstname, $lastname, $permissions, $tickets)
     {
 		$this->userName=$userName;
 		$this->password=$password;

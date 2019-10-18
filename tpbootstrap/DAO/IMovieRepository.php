@@ -1,4 +1,4 @@
-<?php namespace DAO;
+<?php  namespace DAO;
 
 interface IMovieRepository{
 
@@ -6,4 +6,7 @@ interface IMovieRepository{
     function getAll();
     function saveData();
     function retrieveData();
+  
 }
+
+?>

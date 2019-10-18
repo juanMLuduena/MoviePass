@@ -12,11 +12,11 @@ class Movie{
 	private $releaseDate;
 	private $backdropPath;
 
-    public function __construct($adult, $genreIds, $idMovie, $homePage, $language, $title, $overview, $posterPath, $releaseDate,$backdropPath)
+
+    public function __constructor($adult, $genreIds, $idMovie, $homePage, $language, $title, $overview, $posterPath, $releaseDate,$backdropPath)
     {
 		$this->adult=$adult;
-		$this->genreIds=array();
-		$this->genreIds=$genreIds;
+		//$this->genreIds=$genreIds;
 		$this->idMovie=$idMovie;
 		$this->homePage=$homePage;
 		$this->language=$language;
@@ -36,6 +36,7 @@ class Movie{
 		$this->adult = $adult;
 	}
 
+	//Hacer que estos sean para arrays
 	public function getGenreIds(){
 		return $this->genreIds;
 	}
@@ -106,5 +107,10 @@ class Movie{
 
 	public function setBackdropPath($backdropPath){
 		$this->backdropPath = $backdropPath;
+	}
+
+	public function toString(){
+	echo $this->title."<br>";
+	echo $this->posterPath."<br>";
 	}
 }

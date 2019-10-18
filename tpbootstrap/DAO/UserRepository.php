@@ -3,7 +3,7 @@
 class UserRepository implements IUserRepository
 {
     
-    public function __construct(){
+    public function __constructor(){
 
     }
 
