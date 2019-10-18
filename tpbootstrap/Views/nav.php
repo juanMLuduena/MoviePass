@@ -6,7 +6,7 @@
      <ul class="navbar-nav ml-auto">
           
           <li class="nav-item">
-               <a class="nav-link" href=<?php echo FRONT_ROOT . "/Home/Prueba"; ?>>Cartelera</a>
+               <a class="nav-link" href=<?php echo FRONT_ROOT . "/Views/prueba.php"; ?>>Cartelera</a>
           </li>
           <li class="nav-item">
                <a class="nav-link" href="">Tickets</a>

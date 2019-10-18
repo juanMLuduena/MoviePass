@@ -1,17 +1,12 @@
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
-<h1>asdasdsad</h1>
+<?php namespace Views;
+
+
+include("Config/Autoload.php");
+
+$prueba = new MovieRepository();
+
+$prueba :: retrieveData();
+
+print_r($prueba);
+
+?>

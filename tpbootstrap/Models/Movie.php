@@ -2,19 +2,21 @@
 
 class Movie{
     private $adult;
-    private $idGenre;
+    private $genreIds;
     private $idMovie;
     private $homePage;
     private $language;
     private $title;
     private $overview;
     private $posterPath;
-    private $releaseDate;
+	private $releaseDate;
+	private $backdropPath;
 
-    public function __construct($adult, $idGenre, $idMovie, $homePage, $language, $title, $overview, $posterPath, $releaseDate)
+    public function __construct($adult, $genreIds, $idMovie, $homePage, $language, $title, $overview, $posterPath, $releaseDate,$backdropPath)
     {
 		$this->adult=$adult;
-		$this->idGenre=$idGenre;
+		$this->genreIds=array();
+		$this->genreIds=$genreIds;
 		$this->idMovie=$idMovie;
 		$this->homePage=$homePage;
 		$this->language=$language;
@@ -22,6 +24,7 @@ class Movie{
 		$this->overview=$overview;
 		$this->posterPath=$posterPath;
 		$this->releaseDate=$releaseDate;
+		$this->backdropPath=$backdropPath;
         
     }
 
@@ -33,12 +36,12 @@ class Movie{
 		$this->adult = $adult;
 	}
 
-	public function getIdGenre(){
-		return $this->idGenre;
+	public function getGenreIds(){
+		return $this->genreIds;
 	}
 
-	public function setIdGenre($idGenre){
-		$this->idGenre = $idGenre;
+	public function setGenreIds($genreIds){
+		$this->genreIds = $genreIds;
 	}
 
 	public function getIdMovie(){
@@ -95,5 +98,13 @@ class Movie{
 
 	public function setReleaseDate($releaseDate){
 		$this->releaseDate = $releaseDate;
+	}
+
+	public function getBackdropPath(){
+		return $this->backdropPath;
+	}
+
+	public function setBackdropPath($backdropPath){
+		$this->backdropPath = $backdropPath;
 	}
 }
