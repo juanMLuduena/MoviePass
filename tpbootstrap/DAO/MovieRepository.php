@@ -6,6 +6,7 @@ use Models\Movie as Movie;
 
 class MovieRepository //implements IMovieRepository
 {
+
     private $movieList = array ();
 
     public function __constructor(){
@@ -57,29 +58,27 @@ class MovieRepository //implements IMovieRepository
     public function retrieveData(){
 
         $this->movieList = array ();
-
+       
         if(file_exists('Data/movies.json')){
 
             $jsonContent = file_get_contents('Data/movies.json');
-            echo " HOLA";
+    
            $arrayToDecode = ($jsonContent) ? json_decode($jsonContent, true) : array();
-            print_r($arrayToDecode); //Con esto mostramos todo el contenido del json
-            //aca empieza a andar mal
-            foreach($arrayToDecode as $key => $valuesArray){
-                echo "HOLA DESDE EL FOREACH";
+
+            foreach($arrayToDecode as $valuesArray){
+
                 $movie = new Movie();
                 
-                $movie->setAdult($valuesArray["adult"]);
+                $movie->setAdult($valuesArray['adult']);
                // $movie->setGenreIds($valuesArray["genre_ids"]);
-                $movie->setIdMovie($valuesArray["id"]);
+                $movie->setIdMovie($valuesArray['id']);
                 //$movie->setHomePage($valuesArray["homePage"]);
-                $movie->setLanguage($valuesArray["original_language"]);
-                $movie->setTitle($valuesArray["title"]);
-                echo $valuesArray["title"]; //usamos esto para ver si cargaba algo(no lo hace)
-                $movie->setOverview($valuesArray["overview"]);
-                $movie->setPosterPath($valuesArray["poster_path"]);
-                $movie->setReleaseDate($valuesArray["release_date"]);
-                $movie->setBackdropPath($valuesArray["backdrop_path"]);
+                $movie->setLanguage($valuesArray['original_language']);
+                $movie->setTitle($valuesArray['title']);
+                $movie->setOverview($valuesArray['overview']);
+                $movie->setPosterPath($valuesArray['poster_path']);
+                $movie->setReleaseDate($valuesArray['release_date']);
+                $movie->setBackdropPath($valuesArray['backdrop_path']);
 
                 $movie->toString();
                 array_push($this->movieList, $movie);
@@ -92,8 +91,7 @@ class MovieRepository //implements IMovieRepository
         $i=0;
         for($i=0;$i<sizeof($this->movieList);$i++){
 
-        //$movieList[$i]->toString(); 
-        echo $movieList[$i]->getTitle();          
+        echo $this->movieList[$i]->getTitle();          
 
         }
 
