@@ -63,9 +63,10 @@ class MovieRepository //implements IMovieRepository
 
             $jsonContent = file_get_contents('Data/movies.json');
     
-           $arrayToDecode = ($jsonContent) ? json_decode($jsonContent, true) : array();
-
-            foreach($arrayToDecode as $valuesArray){
+            $arrayToDecode= ($jsonContent) ? json_decode($jsonContent, true) : array();
+            //el json original es de la busqueda, y dentro de esa busqueda esta el array de movies
+           // $arrayToDecode=$arrayToDecode2['results'];
+            foreach($arrayToDecode['results'] as $valuesArray){
 
                 $movie = new Movie();
                 
