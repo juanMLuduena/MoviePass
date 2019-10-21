@@ -8,14 +8,9 @@ class Ticket{
     private $movie;
     private $date;
 
-    public function __constructor($price, $id, $cinema, $seat, $movie, $date)
+    public function __construct()
     {
-		$this->price=$price;
-		$this->id=$id;
-		$this->cinema=$cinema;
-		$this->seat=$seat;
-		$this->movie=$movie;
-		$this->date=$date;
+        
     }
 
     public function getPrice(){

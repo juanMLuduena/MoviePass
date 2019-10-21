@@ -7,17 +7,12 @@ class User{
     private $firstname;
     private $lastname;
     private $permissions;
-    private $tickets = array();
+	private $tickets = array();
+	
 
-    public function __constructor($userName, $password, $email, $firstname, $lastname, $permissions, $tickets)
+    public function __construct()
     {
-		$this->userName=$userName;
-		$this->password=$password;
-		$this->email=$email;
-		$this->firstname=$firstname;
-		$this->lastname=$lastname;
-		$this->permissions=$permissions;
-		$this->tickets=$tickets;
+        
     }
 
     public function getUserName(){
@@ -76,8 +71,7 @@ class User{
 		$this->tickets = $tickets;
 	}
 
-	public function getUser(){
-
-		return $this->user;
+	public function toString(){
+		echo "<br> Username: " . $this->getUserName() . "<br>";
 	}
 }

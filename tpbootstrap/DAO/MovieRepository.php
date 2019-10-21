@@ -1,10 +1,11 @@
 <?php namespace DAO;
-include("DAO/IMovieRepository.php");
+
 //API key ead8068ec023b7d01ad25d135bf8f620
 
 use Models\Movie as Movie;
+use DAO\IRepository as IRepository;
 
-class MovieRepository //implements IMovieRepository
+class MovieRepository implements IRepository
 {
 
     private $movieList = array ();
@@ -14,7 +15,7 @@ class MovieRepository //implements IMovieRepository
     }
 
 
-    public function add(Movie $movie){
+    public function add($movie){
 
         $this->retrieveData();
 
@@ -85,6 +86,16 @@ class MovieRepository //implements IMovieRepository
                 array_push($this->movieList, $movie);
             }
         }
+    }
+
+    public function update($data){
+
+
+    }
+
+    public function delete($id){
+
+
     }
     
     public function toString(){

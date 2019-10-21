@@ -1,11 +1,19 @@
-<?php namespace Views;
+<?php
+/*
+use DAO\api as api;
 
-use DAO\MovieRepository as MovieRepository;
+$themoviedb = new api();
 
-$prueba = new MovieRepository();
+//$string = json_encode($themoviedb->getNowPlayingMovies());
+echo $themoviedb->getNowPlayingMovies();
+*/
 
-$prueba :: retrieveData();
 
-print_r($prueba);
+use DAO\UserRepository as UserRepository;
+
+$pruebaUR = new UserRepository;
+
+$pruebaUR->retrieveData();
+
 
 ?>

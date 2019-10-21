@@ -4,16 +4,11 @@ class Cinema{
     private $name;
     private $address;
     private $billBoard = array();
-    private $seats = array(); 
+    private $seats = array();
     private $ticketPrice;
 
-    public function __constructor($name, $address, $billBoard, $seat, $ticketPrice)
+    public function __construct()
     {
-		$this->name=$name;
-		$this->address=$address;
-		$this->billBoard=$billBoard;
-		$this->seats=$seats;
-		$this->ticketPrice=$ticketPrice;
 
     }
     
