@@ -22,4 +22,10 @@ class CellphoneController
 
         $cellphoneRepo->add($cellphone);
     }
+    
+    public function remove($id){
+        var_dump($_POST);   
+        $cr = new CellphoneRepository();
+        $cr->delete($id);
+    }
 }

@@ -20,7 +20,6 @@
     <!-- main body -->
     <div class="content"> 
       <div class="scrollable">
-      <form action="" method="">
         <table style="text-align:center;">
           <thead>
             <tr>
@@ -32,35 +31,27 @@
             </tr>
           </thead>
           <tbody>
+          <?php 
+          foreach( $cr->getAll() as $values)
+          {
+            ?>
             <tr>
-                <td>Value</td>
-                <td>Value</td>
-                <td>Value</td>
-                <td>Value</td>
+            <form action="<?php echo FRONT_ROOT ?>Cellphone/remove" method="POST">
+                <td><?php echo  $values->getCode(); ?></td>
+                <td><?php echo  $values->getBrand(); ?></td>
+                <td><?php echo  $values->getModel(); ?></td>
+                <td><?php echo  $values->getPrice(); ?></td>
+               
+               <td><input type="text" value=" <?php echo  $values->getId(); ?>" name="id"></td> 
                 <td>
-                  <button type="submit" class="btn" value=""> Remove </button>
+                  <button type="submit" class="btn"> Remove </button>
                 </td>
+                
+                </form>
               </tr>
-              <tr>
-                <td>Value</td>
-                <td>Value</td>
-                <td>Value</td>
-                <td>Value</td>
-                <td>
-                  <button type="submit" class="btn" value=""> Remove </button>
-                </td>
-              </tr>
-              <tr>
-                <td>Value</td>
-                <td>Value</td>
-                <td>Value</td>
-                <td>Value</td>
-                <td>
-                  <button type="submit" class="btn" value=""> Remove </button>
-                </td>
-              </tr>
+          <?php } ?>
           </tbody>
-        </table></form> 
+        </table>
       </div>
     </div>
     <!-- / main body -->

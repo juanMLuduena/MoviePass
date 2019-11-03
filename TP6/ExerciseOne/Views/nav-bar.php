@@ -7,8 +7,8 @@
       <ul class="clear">
         <li class="active"><a class="drop" href="#">Actions</a>
           <ul>
-            <li><a href="">ADD</a></li>
-            <li><a href="">LIST/REMOVE</a></li>
+            <li><a href="<?php echo FRONT_ROOT ?>home/addCellphone">ADD</a></li>
+            <li><a href="<?php echo FRONT_ROOT ?>home/cellphonesList">LIST/REMOVE</a></li>
       </ul>
     </nav>
   </header>

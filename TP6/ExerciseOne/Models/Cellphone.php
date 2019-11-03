@@ -8,9 +8,13 @@ class Cellphone
     private $model;
     private $price;
 
-    public function __construct()
+    public function __construct($id=null,$code=null,$brand=null,$model=null,$price=null)
     {
-
+        $this->id=$id;
+        $this->code=$code;
+        $this->brand=$brand;
+        $this->model=$model;
+        $this->price=$price;
     }
 
     public function getId()

@@ -3,11 +3,15 @@
 use Models\Cellphone as Cellphone;
 use DAO\Connection as Connection;
 
-class CellphoneRepository 
+class CellphoneRepository extends Singleton
 {
     private $connection;
 
-    function __construct() {}
+    function __construct() {
+
+        $this->connection=null;
+
+    }
 
 
     public function add($cellphone) 
@@ -51,12 +55,14 @@ class CellphoneRepository
         {
             throw $ex;
         }
-
-
-        if(!empty($resultSet))
+        finally {
+            if(!empty($resultSet))
             return $this->mapear($resultSet);
         else
             return false;
+        }
+
+      
     }
 
           public function getAll() {
@@ -100,21 +106,21 @@ class CellphoneRepository
           public function delete($id_cellphone) {
                $sql = "DELETE FROM Cellphones WHERE id_cellphone = :id_cellphone";
 
-               $obj_pdo = new Conexion();
+            $parameters['id_cellphone']=$id_cellphone;
+               //$obj_pdo = new Conexion();
 
                try {
-                    $conexion = $obj_pdo->conectar();
-
-				$sentencia = $conexion->prepare($sql);
-
-                    $sentencia->bindParam(":id_cellphone", $id_cellphone);
-
-                    $sentencia->execute();
-
+                   $this->connection= Connection::getInstance();
+                   return $this->connection->executeNonQuery($sql,$parameters);
+                //     $conexion = $obj_pdo->conectar();
+				// $sentencia = $conexion->prepare($sql);
+                //     $sentencia->bindParam(":id_cellphone", $id_cellphone);
+                //     $sentencia->execute();
 
                } catch(PDOException $Exception) {
 
-				throw new MyDatabaseException( $Exception->getMessage( ) , $Exception->getCode( ) );
+               
+				throw $Exception;
 
 			}
           }
@@ -125,7 +131,7 @@ class CellphoneRepository
 			$value = is_array($value) ? $value : [];
 
 			$resp = array_map(function($p){
-				return new Cellphone($p['id_cellphone'], $p['code'], $p['model'], $p['brand'], $p['price']);
+				return new Cellphone($p['id_cellphone'], $p['code'], $p['brand'],$p['model'], $p['price']);
 			}, $value);
 
                return count($resp) > 1 ? $resp : $resp['0'];

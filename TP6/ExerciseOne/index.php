@@ -11,6 +11,7 @@
 	use Config\Router 	as Router;
 	use Config\Request 	as Request;
 	use DAO\CellphoneRepository as CellphoneRepository;
+	use DAO\Singleton as Singleton;
 		
 	Autoload::start();
 
@@ -20,10 +21,6 @@
 
 	Router::Route(new Request());
 
-	
-
-	$cellphoneRepo = new CellphoneRepository();
-	var_dump($cellphoneRepo->getAll());
 
 	require_once(VIEWS_PATH."footer.php");
 ?>

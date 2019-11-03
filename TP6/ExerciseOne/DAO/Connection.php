@@ -34,8 +34,6 @@ class Connection {
           {
                $this->pdoStatement = $this->pdo->prepare($query);
 
-               var_dump($this->pdoStatement);
-
                foreach($parameters as $parameterName => $value)
                {
                     $this->pdoStatement->bindParam(":".$parameterName, $value);
