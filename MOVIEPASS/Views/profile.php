@@ -46,6 +46,10 @@ if($userControl->checkSession()!=false)
                     <th scope="row">Contraseña</th>
                     <td><?php echo $_SESSION["loggedUser"]->getPassword(); ?></td>
                 </tr>
+                <!-- <tr>
+                    <th scope="row">DNI</th>
+                    <td><?php //echo $_SESSION["loggedUser"]->getDni(); ?></td>
+                </tr> -->
         </tbody>
     </table>
 

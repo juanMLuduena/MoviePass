@@ -166,6 +166,13 @@ class UserRepository implements IRepository
 
     }
 
+    public function dniAt($i)
+    {
+
+        return $this->userList[$i]->getDni();
+
+    }
+
     // private $userName;
     // private $password;
     // private $email;

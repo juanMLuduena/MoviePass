@@ -19,7 +19,7 @@ class UserController
         require_once(VIEWS_PATH . "profile.php");
     }
 
-    public function signUp($username, $password, $firstname, $lastname, $email)
+    public function signUp($username, $password, $firstname, $lastname, $email, $dni)
     {
         $add = true;
         $userList = new UserRepository();
@@ -38,6 +38,7 @@ class UserController
             $user->setLastname($lastname);
             $user->setEmail($email);
             $user->setPermissions(2);
+            $user->setDni($dni);
             $userList->Add($user);
 
             $_SESSION["loggedUser"] = $user; //se setea el usuario en sesion a la variable session
@@ -80,6 +81,7 @@ class UserController
             $loggedUser->setLastname($userList->lastNameAt($i - 1));
             $loggedUser->setEmail($userList->emailAt($i - 1));
             $loggedUser->setPermissions($userList->permissionsAt($i - 1));
+            $loggedUser->setDni($userList->dniAt($i - 1));
             $_SESSION["loggedUser"] = $loggedUser; //se setea el usuario en sesion a la variable session
 
             // if($view=="client")
@@ -154,7 +156,7 @@ class UserController
         }
     }
 
-    public function modifyUser($firstname, $lastname, $email, $username, $password)
+    public function modifyUser($firstname, $lastname, $email, $username, $password, $dni)
     {
         echo "EN PROCESO DE DESARROLLO";
         // $userList = new UserRepository();

@@ -1,7 +1,7 @@
 <?php namespace Models;
 
 class User{
-	private $id=null;
+	private $id;
     private $userName;
     private $password;
     private $email;
@@ -10,8 +10,10 @@ class User{
     private $permissions; //asignar un id dependiendo del rol, en un futuro pueden existir mas roles como gerente, empleado, etc
 	//1 Admin, 2 Client
 	private $tickets = array();
+	private $dni;
+	private $creditCards = array();
 
-    public function __construct($id=null, $userName=null, $password=null, $email=null, $firstname=null, $lastname=null, $permissions=null)
+    public function __construct($id=null, $userName=null, $password=null, $email=null, $firstname=null, $lastname=null, $permissions=null, $dni=null)
     {
         
     }
@@ -72,7 +74,19 @@ class User{
 		$this->tickets = $tickets;
 	}
 
-	public function toString(){
-		$this->getUserName();
+	public function getDni(){
+		return $this->dni;
+	}
+
+	public function setDni($dni){
+		$this->dni = $dni;
+	}
+
+	public function getCreditCards(){
+		return $this->creditCards;
+	}
+
+	public function setCreditCards($creditCards){
+		$this->creditCards = $creditCards;
 	}
 }

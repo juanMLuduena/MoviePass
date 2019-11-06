@@ -18,11 +18,11 @@ class TicketController
 
     public function ticketPurchase($date, $quantityTickets, $total, $discount, $emailUser)
     {
-
+        echo "En proceso de desarrollo.";
     }
 
     public function cartPurchase()
     {
-        
+        echo "En proceso de desarrollo.";
     }
 }

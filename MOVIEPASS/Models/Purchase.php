@@ -13,7 +13,7 @@ class Purchase
 
     public function __construct($id=null, $purchaseDate=null, $quantityTickets=null, $total=null, $discount=null, $emailUser=null, $movieId=null, $showId=null)
     {
-
+        
     }
 
     public function getId()
