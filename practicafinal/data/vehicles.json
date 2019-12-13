@@ -1,0 +1,18 @@
+[
+    {
+        "brand": "Fiat",
+        "model": "ito",
+        "plate": "abc 123",
+        "year": "1999",
+        "email": "bianca@putita.com",
+        "id": 1
+    },
+    {
+        "brand": "Bianca",
+        "model": "Bionico",
+        "plate": "abc 123",
+        "year": "1999",
+        "email": "bianca@putita.com",
+        "id": 4
+    }
+]

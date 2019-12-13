@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "userName": "juan",
+        "pass": "bianca",
+        "email": "bianca@putita.com",
+        "dni": "1233"
+    },
+    {
+        "id": 2,
+        "userName": "bianca",
+        "pass": "putojuan",
+        "email": "pito@verga.com",
+        "dni": "4321"
+    },
+    {
+        "id": 3,
+        "userName": "buda",
+        "pass": "4321",
+        "email": "negro@mestizo",
+        "dni": "3333"
+    }
+]
